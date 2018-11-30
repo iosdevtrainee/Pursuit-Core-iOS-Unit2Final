@@ -52,6 +52,7 @@ class DetailViewController: UIViewController {
   @IBOutlet weak var resetButton: UIButton!
   @IBOutlet weak var alphaTextField: UITextField!
   @IBOutlet weak var alphaStepper: UIStepper!
+  @IBOutlet weak var colorNameLabel: UILabel!
   
   
   
@@ -62,6 +63,7 @@ class DetailViewController: UIViewController {
     blueTextField.delegate = self
     greenTextField.delegate = self
     reset(sender:resetButton)
+    colorNameLabel.text = crayon.name
     // Do any additional setup after loading the view.
   }
   

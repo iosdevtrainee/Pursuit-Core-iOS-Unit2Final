@@ -76,6 +76,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sy6-Ln-8ke">
+                                <rect key="frame" x="0.0" y="323.5" width="375" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="ixg-xt-zzy">
                                 <rect key="frame" x="0.0" y="31" width="375" height="192"/>
                                 <subviews>
@@ -132,16 +138,16 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WyB-tA-oY5">
-                                <rect key="frame" x="0.0" y="256" width="375" height="29"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WyB-tA-oY5">
+                                <rect key="frame" x="0.0" y="256" width="375" height="29.5"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CbH-xD-FCO">
-                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="29"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CbH-xD-FCO">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="29.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="1" stepValue="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="9Dm-2O-f9y">
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="1" stepValue="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="9Dm-2O-f9y">
                                         <rect key="frame" x="187.5" y="0.0" width="94" height="29"/>
                                         <connections>
                                             <action selector="onAlphaChange:" destination="7K2-11-wDa" eventType="valueChanged" id="uUU-KK-bkS"/>
@@ -149,9 +155,8 @@
                                     </stepper>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="um4-zx-CmK">
-                                <rect key="frame" x="154" y="352" width="39" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="um4-zx-CmK">
+                                <rect key="frame" x="0.0" y="352" width="375" height="30"/>
                                 <state key="normal" title="Reset"/>
                                 <connections>
                                     <action selector="resetWithSender:" destination="7K2-11-wDa" eventType="touchUpInside" id="DPR-FK-0v5"/>
@@ -160,10 +165,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="um4-zx-CmK" firstAttribute="centerX" secondItem="517-jZ-gpD" secondAttribute="centerX" id="2pf-hA-8qo"/>
+                            <constraint firstItem="Sy6-Ln-8ke" firstAttribute="centerY" secondItem="XCC-7f-yXV" secondAttribute="centerY" id="8Rn-BN-7qr"/>
+                            <constraint firstItem="um4-zx-CmK" firstAttribute="width" secondItem="XCC-7f-yXV" secondAttribute="width" id="FE8-bm-DYh"/>
+                            <constraint firstItem="Sy6-Ln-8ke" firstAttribute="width" secondItem="XCC-7f-yXV" secondAttribute="width" id="G5F-9l-MuJ"/>
                             <constraint firstItem="ixg-xt-zzy" firstAttribute="top" secondItem="517-jZ-gpD" secondAttribute="top" constant="11" id="QYq-QR-8Le"/>
+                            <constraint firstItem="Sy6-Ln-8ke" firstAttribute="centerX" secondItem="517-jZ-gpD" secondAttribute="centerX" id="Qx6-Ew-A7U"/>
                             <constraint firstItem="ixg-xt-zzy" firstAttribute="centerX" secondItem="517-jZ-gpD" secondAttribute="centerX" id="bd7-Gh-wQL"/>
+                            <constraint firstItem="um4-zx-CmK" firstAttribute="top" secondItem="Sy6-Ln-8ke" secondAttribute="bottom" constant="8" symbolic="YES" id="cyc-cA-m8g"/>
                             <constraint firstItem="517-jZ-gpD" firstAttribute="trailing" secondItem="WyB-tA-oY5" secondAttribute="trailing" id="gNL-b0-dGO"/>
                             <constraint firstItem="WyB-tA-oY5" firstAttribute="top" secondItem="ixg-xt-zzy" secondAttribute="bottom" constant="33" id="hbt-mO-HXB"/>
+                            <constraint firstItem="Sy6-Ln-8ke" firstAttribute="top" secondItem="WyB-tA-oY5" secondAttribute="bottom" constant="38" id="m9T-He-csv"/>
                             <constraint firstItem="ixg-xt-zzy" firstAttribute="width" secondItem="XCC-7f-yXV" secondAttribute="width" id="xlf-wv-WzC"/>
                             <constraint firstItem="WyB-tA-oY5" firstAttribute="leading" secondItem="517-jZ-gpD" secondAttribute="leading" id="zlX-2k-VFR"/>
                         </constraints>
@@ -174,6 +186,7 @@
                         <outlet property="alphaTextField" destination="CbH-xD-FCO" id="bUu-bn-Onp"/>
                         <outlet property="blueSlider" destination="ejb-hJ-mIr" id="Jfj-Sa-qSA"/>
                         <outlet property="blueTextField" destination="b9u-OV-gtJ" id="ScI-ap-l0Y"/>
+                        <outlet property="colorNameLabel" destination="Sy6-Ln-8ke" id="Lrt-sP-bEM"/>
                         <outlet property="greenSlider" destination="0wx-LQ-bKF" id="3yh-5G-ams"/>
                         <outlet property="greenTextField" destination="VQG-FD-t7y" id="4fZ-r9-qhe"/>
                         <outlet property="redSlider" destination="HFy-Dq-tLG" id="Tgq-XX-dTN"/>
